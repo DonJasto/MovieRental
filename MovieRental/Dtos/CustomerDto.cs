@@ -19,6 +19,7 @@ namespace MovieRental.Dtos
 
         //Foreign key
         public byte MembershipTypeId { get; set; }
+        public MembershipTypeDto MembershipType { get; set; }
 
         //IHttpActionResult mismatch Customer [Min18YearsIfAMember]
         public DateTime? Birthdate { get; set; }
