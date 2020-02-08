@@ -47,6 +47,8 @@ else
     {
     <script>
         $(document).ready(function () {
+            $("#customers").DataTable();
+
             //Added js-delete filter so now we only have one handler on customer selector
             $("#customers").on("click",".js-delete", function () {
                 var button = $(this);
