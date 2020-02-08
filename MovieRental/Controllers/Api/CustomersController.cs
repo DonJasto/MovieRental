@@ -2,6 +2,7 @@
 using MovieRental.Dtos;
 using MovieRental.Models;
 using System;
+using System.Data.Entity;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -21,7 +22,10 @@ namespace MovieRental.Controllers.Api
         //GET /api/customers
         public IHttpActionResult GetCustomers() 
         {
-            var customerDtos = _context.Customers.ToList().Select(Mapper.Map<Customer, CustomerDto>);
+            var customerDtos = _context.Customers
+                .Include(c => c.MembershipType)
+                .ToList()
+                .Select(Mapper.Map<Customer, CustomerDto>);
 
             return Ok(customerDtos);
         }
