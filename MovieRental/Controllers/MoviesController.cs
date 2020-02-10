@@ -27,8 +27,10 @@ namespace MovieRental.Controllers
         public ViewResult Index()
         {
             //var movies = _context.Movies.Include(m => m.Genre).ToList();
-
-            return View();
+            if(User.IsInRole("CanManageMovies"))
+                return View("List");
+            else
+                return View("ReadOnlyList");
         }
 
         public ActionResult Details(int id)
@@ -61,6 +63,7 @@ namespace MovieRental.Controllers
             return View(viewModel);
         }
 
+        [Authorize(Roles = "CanManageMovies")]
         public ViewResult New()
         {
             var genres = _context.Genres.ToList();
