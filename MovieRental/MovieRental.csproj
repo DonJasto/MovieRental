@@ -265,6 +265,10 @@
     <Compile Include="Migrations\202002100004354_SeedUsers.Designer.cs">
       <DependentUpon>202002100004354_SeedUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002162026469_AddPersonalIdentificationNumberToApplicationUser.cs" />
+    <Compile Include="Migrations\202002162026469_AddPersonalIdentificationNumberToApplicationUser.Designer.cs">
+      <DependentUpon>202002162026469_AddPersonalIdentificationNumberToApplicationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -684,6 +688,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002100004354_SeedUsers.resx">
       <DependentUpon>202002100004354_SeedUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002162026469_AddPersonalIdentificationNumberToApplicationUser.resx">
+      <DependentUpon>202002162026469_AddPersonalIdentificationNumberToApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
