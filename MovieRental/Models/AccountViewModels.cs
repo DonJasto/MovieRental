@@ -8,6 +8,11 @@ namespace MovieRental.Models
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
+
+        [Required]
+        [Display(Name = "Personal Identification Number")]
+        public string PersonalIdentificationNumber { get; set; }
+
     }
 
     public class ExternalLoginListViewModel
