@@ -40,7 +40,9 @@ namespace MovieRental.Controllers.Api
                 _context.Rentals.Add(rental);
             }
 
-        return Ok();
+            _context.SaveChanges();
+
+            return Ok();
         }
     }
 }
