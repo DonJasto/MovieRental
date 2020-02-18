@@ -81,6 +81,20 @@
                 vModel.movieIds.push(movie.id);
             });
 
+            $("#newRental").submit(function (e) {
+                e.preventDefault();
+                $.ajax({
+                    url: "/api/newRentals",
+                    method: "post",
+                    data: vModel
+                })
+                    .done(function () {
+                        console.log("done");
+                    })
+                    .fail(function () {
+                    });
+            });
+
         });
     </script>
 }
